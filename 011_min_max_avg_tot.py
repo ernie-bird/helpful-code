@@ -1,4 +1,4 @@
-def min_max_avg(x, y, z):
+def min_max_avg_tot(x, y, z):
     minimum = maximum = x
     if y < minimum:
         minimum = y
@@ -8,7 +8,8 @@ def min_max_avg(x, y, z):
         maximum = y
     if z > maximum:
         maximum = z
-    average = (x+y+z)/3
-    return minimum, maximum, average
+    total = x+y+z
+    average = total/3
+    return minimum, maximum, average, total
 
-min_max_avg(5, 6, 7)
+min_max_avg_tot(5, 6, 7)
